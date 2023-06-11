@@ -1,0 +1,30 @@
+let preveiwContainer = document.querySelector(".products-preview");
+let preveiwBox = document.querySelectorAll(".preview");
+
+document.querySelectorAll(".product-container .product").forEach(product =>{
+    product.onClick = () => {
+        preveiwContainer.style.display = "flex";
+        let name = product.getAttribute("data-name");
+        preveiwBox.forEach(preview => {
+            let target = preview.getAttribute('data-target');
+            if(name == target){
+                preview.classList.add('active');
+            };
+        });
+    };
+});
+
+
+ <div class="form-wrepper">
+            <form action="POST" id="searchForm">
+                <input type="text" name="search" id = "search">
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+
+
+<div class="for-img">
+                    <img src="" alt="">
+                    <h4></h4>
+                    <p></p>
+                </div>

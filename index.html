@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Coctail search</h1>
+        </div>
+        
+        <div class="form-wrepper">
+            <form action="POST" id="searchForm">
+                <input type="text" name="search" id = "search">
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+
+        <div class="product-container" id="product-container">
+            <div class="products-preview" id="products-preview">
+            
+            </div>
+        </div>
+    </div>  
+
+    <template id="productCard">
+        <div class="product" data-name="" id="product">
+            <img src="" alt="" id="cardImg">
+            <h3 id="title"></h3>
+        </div>
+    </template>
+    <template id="productPreview">
+        <div class="preview" data-target="" id="preview">
+            <i class="fas fa-times"></i>
+            <h3 id="ingredient">Ингридиенты</h3>
+            <div class="ing" id="ingredients"></div>
+            <h4>Инструкция</h4>
+            <p id="instraction"></p>   
+        </div>
+    </template>
+    <template id="forImg">
+        <div class="for-img">
+            <img src="" alt="" id="imgIngredient">
+            <h4 id="ingredient"></h4>
+            <p id="doza"></p>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
